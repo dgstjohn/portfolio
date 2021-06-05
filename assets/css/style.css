@@ -1,9 +1,8 @@
 /*
 TO DO:
---MAKE REPO
 --MEDIA QUERIES
 --HOVER AND OTHER PSEUDO ELEMENTS
---TWEAK FOR UNMATCHED ELEMENTS -- NAME IN HEADER, HOVERS
+--SEARCH FOR AND TWEAK ANY UNMATCHED ELEMENTS
 --COMMENT CSS (FOR REAL, NOT THIS)
 */
 
@@ -31,7 +30,7 @@ p {
 
 header {
     width: 100%;
-    padding: 20px 35px;
+    padding: 20px 35px 20px 0;
     margin: 0;
     background-color: var(--text-color);
     background-size: cover;
@@ -45,12 +44,10 @@ header {
 /* opt after assignment to not to knock out dark text against lighter backdrop as the mockup had it */
 
 header h1 {
-    /* MUST REMEMBER TO POSITION THIS LEFT IN VIEWPORT AND PULL TEXT TO RIGHT */
     padding: 7px 35px 7px 100px;
     color: var(--text-color);
     background-color: var(--body-color);
     display: inline-block;
-    text-align: right;
     font-size: 48px;
 }
 
@@ -99,6 +96,7 @@ header nav ul li a {
     display: flex;
     flex-wrap: wrap;
     width: 200px;
+    /* width: 25%; */
     text-align: right;
     margin: 5px 0 5px 5px;
 }
@@ -118,7 +116,7 @@ header nav ul li a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 70%;
+    width: 75%;
     margin: 5px 50px 10px 30px;
     padding: 0;
 }
@@ -130,7 +128,7 @@ header nav ul li a {
 }
 
 .secondary-image {
-    width: 48%;
+    width: 49%;
     position: relative;
 }
 
@@ -144,6 +142,10 @@ header nav ul li a {
 .section-content img {
     border: 5px solid var(--border-color);
     width: 100%;
+}
+
+.section-content img:hover {
+    opacity: 0.5;
 }
 
 .section-content h3 {
@@ -181,8 +183,9 @@ header nav ul li a {
     text-decoration: none;
 }
 
-.contact-info ul li a;hover {
+.contact-info ul li a:hover {
     color: red;
+    border-bottom: 3px solid red;
     text-decoration: none;
 }
 
@@ -192,26 +195,105 @@ header nav ul li a {
     header {
         /* this will be applied on any screen smaller than 980px */
         padding-bottom: 0;
-        justify-content: center;
         position: relative;
     }
 
     header h1 {
         width: 100%;
         text-align: center;
+        color: var(--body-color);
+        background-color: var(--text-color);
+        padding: 0;
     }
 
     header nav ul {
-        margin-top: 20px;
+        margin: 0;
+        padding-bottom: 30px;
         width: 100%;
         justify-content: center;
+        text-align: center;
     }
 
     header nav ul li a {
         font-size: 20px;
     }
 
+    .main-image {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+    
+    .secondary-image {
+        width: 100%;
+        position: relative;
+    }
+    
+    .image-tab {
+        padding: 10px 20px;
+        background-color: var(--border-color);
+        position: absolute;
+        bottom: 70px;
+    }
+    
+    .section-content img {
+        border: 5px solid var(--border-color);
+        width: 100%;
+    }
+    
+    .section-content h3 {
+        font-size: 20px;
+    }
+    
+    .section-content h4 {
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+
 /* MEDIA QUERY FOR TABLETS AND SMALLER (MAX WIDTH 768)
+
+
 
 MEDIA QUERY FOR MOBILE PHONES AND SMALLER (MAX WIDTH 575)
 */
+
+.info-container {
+    display: contents;
+}
+
+.section-header {
+    display: contents;
+    width: 100%;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.section-header h1 {
+    font-size: 32px;
+    border-right: none;
+    text-decoration: underline solid var(--body-color);
+    padding-bottom: 5px;
+    text-align: left;
+    margin: 0 25px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: disc;
+    }
+
+.contact-info ul li {
+    display: inline-block;
+    list-style-type: disc;
+    margin-left: 50px;
+    border-bottom: 3px solid var(--text-color);
+    margin-bottom: 10px;
+}
