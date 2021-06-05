@@ -37,8 +37,9 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* position: sticky; */
+    position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 /* opt after assignment to not to knock out dark text against lighter backdrop as the mockup had it */
@@ -250,50 +251,56 @@ header nav ul li a {
         font-weight: normal;
     }
     
+}
 
-/* MEDIA QUERY FOR TABLETS AND SMALLER (MAX WIDTH 768)
+/* MEDIA QUERY FOR TABLETS AND SMALLER (MAX WIDTH 768) */
 
+@media screen and (max-width: 768px) {
 
+}
 
-MEDIA QUERY FOR MOBILE PHONES AND SMALLER (MAX WIDTH 575)
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER (MAX WIDTH 575)
 */
 
-.info-container {
-    display: contents;
-}
+@media screen and (max-width: 575px) {
 
-.section-header {
-    display: contents;
-    width: 100%;
-    text-align: left;
-    padding: 0 20px;
-}
-
-.section-header h1 {
-    font-size: 32px;
-    border-right: none;
-    text-decoration: underline solid var(--body-color);
-    padding-bottom: 5px;
-    text-align: left;
-    margin: 0 25px;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-info ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style-type: disc;
+    .info-container {
+        display: contents;
     }
 
-.contact-info ul li {
-    display: inline-block;
-    list-style-type: disc;
-    margin-left: 50px;
-    border-bottom: 3px solid var(--text-color);
-    margin-bottom: 10px;
+    .section-header {
+        display: contents;
+        width: 100%;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .section-header h1 {
+        font-size: 32px;
+        border-right: none;
+        text-decoration: underline solid var(--text-color);
+        padding-bottom: 5px;
+        text-align: left;
+        margin: 0 25px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-info ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style-type: disc;
+    }
+
+    .contact-info ul li {
+        /* display: inline-block; */
+        list-style-type: disc;
+        margin-left: 50px;
+        border-bottom: 3px solid var(--text-color);
+        margin-bottom: 10px;
+}
 }
