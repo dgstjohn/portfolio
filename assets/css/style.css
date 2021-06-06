@@ -78,7 +78,7 @@ header nav ul li a {
 .hero {
     width: 100%;
     height: 225px;
-    background-image: url("/./assets/images/desert.jpg");
+    background-image: url("./images/desert.jpg");
     background-size: cover;
     margin-bottom: 30px;
 }
