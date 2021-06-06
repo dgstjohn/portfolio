@@ -1,8 +1,5 @@
 <!-- TO DO:
 --SEMANTIC CORREX
---ADJUST HERO PICTURE (RECROP?)
---ADD REAL IMAGES (AND MAYBE COPY TOO) -- DON'T FORGET PIC OF ME IN "ABOUT ME"
---QUESTIONS FOR NATE/JAIME
 --COMMENT HTML
 -->
 
@@ -17,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
+    <!-- header with navigation elements -->
     <header>
         <h1>Don St. John</h1>
         <nav>
@@ -30,6 +28,7 @@
                 <li>
                     <a href="#contact-me">Contact Me</a>
                 </li>
+                <!-- deliberately left Resume link with hashtag rather than put a live resume on the Internet -->
                 <li>
                     <a href="#">Resume</a>
                 </li>
@@ -38,9 +37,9 @@
     </header>
     <!-- hero section with picture and subhed box -->
     <section class="hero">
-        <div>
+        <div class="hero-subhead">
             <h2>
-                Doing Web Development <br />Since the Beginning of the Web
+                Developing Websites<br />Since the Beginning of the Web
             </h2>
         </div>
     </section>
@@ -52,10 +51,9 @@
             </h1>
         </div>
         <div class="section-content">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non facere numquam, repudiandae maxime ducimus provident at, mollitia est sunt nam corrupti? Quidem temporibus, obcaecati nobis enim illum fugiat quo consequatur!</p>
-        </div>
+            <article class="personal-pic"><img src="./assets/images/dsj-headshot.jpg" alt="Headshot of Don St. John" /></div><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aut in consectetur soluta incidunt voluptas. Ipsam, architecto ut ratione libero eos harum, quae tenetur reiciendis ullam repudiandae perspiciatis cupiditate ducimus!</div>
     </section>
-    <!-- work section with one large visual element and four smaller ones, each with boxed text tab with he/h4 elements -->
+    <!-- work section with one large visual element and four smaller ones, each with boxed text tab with h3/h4 elements, that link to represented -->
     <section id="work" class="info-container">
         <div class="section-header">
             <h1>
@@ -68,28 +66,28 @@
                     <h3>University of Massachusetts Medical School</h3>
                     <h4>HTML/CSS/JavaScript</h4>
                 </div>
-                <a href="" target="_blank"><img src="./assets/images/desert.jpeg" alt="A picture of the University of Massachusetts Medical School homepage" /></a>
+                <a href="https://umassmed.edu/" target="_blank"><img src="./assets/images/umms.jpg" alt="A picture of the University of Massachusetts Medical School homepage" /></a>
             </div>
             <div class="secondary-image">
                 <div class="image-tab">
                     <h3>Daily Hampshire Gazette</h3>
                     <h4>HTML/CSS/JavaScript</h4>
                 </div>
-                <a href="" target="_blank"><img src="./assets/images/desert.jpeg" alt="A picture of the Daily Hampshire Gazette homepage" /></a>
+                <a href="https://www.gazettenet.com/" target="_blank"><img src="./assets/images/gazette.jpg" alt="A picture of the Daily Hampshire Gazette homepage" /></a>
             </div>
             <div class="secondary-image">
                 <div class="image-tab">
                     <h3>Electronic Entertainment Magazine</h3>
                     <h4>HTML/CSS/JavaScript</h4>
                 </div>
-                <img src="./assets/images/desert.jpeg" />
+                <a href="https://archive.org/search.php?query=Electronic+Entertainment" target="_blank"><img src="./assets/images/e2.jpg" /></a>
             </div>
             <div class="secondary-image">
                 <div class="image-tab">
                     <h3>Run Buddy</h3>
                     <h4>HTML/CSS/JavaScript</h4>
                 </div>
-                <img src="./assets/images/desert.jpeg" />
+                <img src="./assets/images/run-buddy.jpg" />
             </div>
             <div class="secondary-image">
                 <div class="image-tab">

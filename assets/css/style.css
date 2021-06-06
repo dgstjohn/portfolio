@@ -2,9 +2,9 @@
 TO DO:
 --MEDIA QUERIES
 --HOVER AND OTHER PSEUDO ELEMENTS
---SEARCH FOR AND TWEAK ANY UNMATCHED ELEMENTS
---COMMENT CSS (FOR REAL, NOT THIS)
 */
+
+/* global styles; set main site colors to be called as variables throughout */
 
 :root {
     --text-color: #090925;
@@ -28,8 +28,11 @@ p {
     color: var(--text-color);
 }
 
+/* header styles */
+
 header {
     width: 100%;
+    /* left-side padding zeroed out to run block into the side of the viewport */
     padding: 20px 35px 20px 0;
     margin: 0;
     background-color: var(--text-color);
@@ -37,12 +40,11 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: sticky;
     top: 0;
-    z-index: 100;
+    /* opted against a sticky header element
+    position: sticky;
+    z-index: 100; */
 }
-
-/* opt after assignment to not to knock out dark text against lighter backdrop as the mockup had it */
 
 header h1 {
     padding: 7px 35px 7px 100px;
@@ -59,6 +61,7 @@ header nav {
     font-size: 20px;
 }
 
+/* stripped standard list bullets */
 header nav ul {
     list-style-type: none;
 }
@@ -66,12 +69,14 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
+    /* combination of padding and border-bottom to give nav links underline extending slightly past either side of the text */
     padding: 0 10px 5px 10px;
     border-bottom: 3px solid var(--body-color);
 }
 
 header nav ul li a {
     color: var(--body-color);
+    /* no default underlining of link items (because of the border-bottom */
     text-decoration: none;
 }
 
@@ -85,6 +90,10 @@ header nav ul li a {
     margin-bottom: 30px;
 }
 
+.hero-subhead {
+    padding: 20px 0 0 50px;
+}
+
 /* container class for informational items */
 
 .info-container {
@@ -93,11 +102,13 @@ header nav ul li a {
     margin-bottom: 30px;
 }
 
+/* styling for section headers to left of copy */
+
 .section-header {
     display: flex;
     flex-wrap: wrap;
+    /* fixed width to control right-side border line */
     width: 200px;
-    /* width: 25%; */
     text-align: right;
     margin: 5px 0 5px 5px;
 }
@@ -107,11 +118,14 @@ header nav ul li a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--text-color);
     padding-right: 20px;
+    /* set right-side border line to run defined by depth of section-content element */
     border-right: 3px solid var(--text-color);
     text-align: right;
     margin-left: auto;
     margin-right: 0;
 }
+
+/* styling for section content areas -- About Me, Work and Contact Me */
 
 .section-content {
     display: flex;
@@ -122,22 +136,19 @@ header nav ul li a {
     padding: 0;
 }
 
+styling for Work images
+
 .main-image {
     width: 100%;
     object-fit: cover;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .secondary-image {
     width: 49%;
+    margin-bottom: 30px;
     position: relative;
-}
-
-.image-tab {
-    padding: 10px 20px;
-    background-color: var(--border-color);
-    position: absolute;
-    bottom: 70px;
 }
 
 .section-content img {
@@ -145,9 +156,12 @@ header nav ul li a {
     width: 100%;
 }
 
+/* cut image opacity in half on hover to match mockup */
 .section-content img:hover {
     opacity: 0.5;
 }
+
+/* styling for h3/h4 text in the tabbed text overlying the images */
 
 .section-content h3 {
     font-size: 20px;
@@ -157,6 +171,28 @@ header nav ul li a {
     font-size: 14px;
     font-weight: normal;
 }
+
+/* styling for personal photo in About Me  */
+
+.personal-pic {
+    flex: none;
+    float: left;
+    width: 200px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* styling for descriptive tabs on the work images */
+
+.image-tab {
+    padding: 10px 20px;
+    background-color: var(--border-color);
+    position: absolute;
+    bottom: 70px;
+}
+
+/* styling for Contact Me area */
 
 .contact-info {
     display: flex;
@@ -184,9 +220,17 @@ header nav ul li a {
     text-decoration: none;
 }
 
+/* styling for hover/click states on Contact Me links (does not include phone number) */
+
 .contact-info ul li a:hover {
     color: red;
     border-bottom: 3px solid red;
+    text-decoration: none;
+}
+
+.contact-info ul li a:click {
+    color: purple;
+    border-bottom: 3px solid purple;
     text-decoration: none;
 }
 
@@ -196,12 +240,14 @@ header nav ul li a {
     header {
         /* this will be applied on any screen smaller than 980px */
         padding-bottom: 0;
+        justify-content: center;
         position: relative;
     }
 
     header h1 {
         width: 100%;
         text-align: center;
+        /* for all sizes below 980px, swapped the text and background colors from the full-sized version for light text on dark background */
         color: var(--body-color);
         background-color: var(--text-color);
         padding: 0;
@@ -223,11 +269,13 @@ header nav ul li a {
         width: 100%;
         object-fit: cover;
         position: relative;
+        margin-bottom: 15px;
     }
     
     .secondary-image {
         width: 100%;
         position: relative;
+        margin-bottom: 15px;
     }
     
     .image-tab {
@@ -236,7 +284,15 @@ header nav ul li a {
         position: absolute;
         bottom: 70px;
     }
+
+    .section-header h1 {
+        font-size: 36px;
+    }
     
+    .section-content {
+        width: 60%
+    }
+
     .section-content img {
         border: 5px solid var(--border-color);
         width: 100%;
@@ -249,39 +305,6 @@ header nav ul li a {
     .section-content h4 {
         font-size: 14px;
         font-weight: normal;
-    }
-    
-}
-
-/* MEDIA QUERY FOR TABLETS AND SMALLER (MAX WIDTH 768) */
-
-@media screen and (max-width: 768px) {
-
-}
-
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER (MAX WIDTH 575)
-*/
-
-@media screen and (max-width: 575px) {
-
-    .info-container {
-        display: contents;
-    }
-
-    .section-header {
-        display: contents;
-        width: 100%;
-        text-align: left;
-        padding: 0 20px;
-    }
-
-    .section-header h1 {
-        font-size: 32px;
-        border-right: none;
-        text-decoration: underline solid var(--text-color);
-        padding-bottom: 5px;
-        text-align: left;
-        margin: 0 25px;
     }
 
     .contact-info {
@@ -302,5 +325,45 @@ header nav ul li a {
         margin-left: 50px;
         border-bottom: 3px solid var(--text-color);
         margin-bottom: 10px;
+    }   
+    
 }
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER (MAX WIDTH 768) */
+
+@media screen and (max-width: 768px) {
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER (MAX WIDTH 575)
+*/
+
+@media screen and (max-width: 575px) {
+
+    .hero-subhead {
+        padding: 5px 0 0 20px;
+    }
+    
+
+    .info-container {
+        display: contents;
+    }
+
+    .section-header {
+        display: contents;
+        width: 150px;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .section-header h1 {
+        font-size: 32px;
+        border-right: none;
+        text-decoration: underline solid var(--text-color);
+        padding-bottom: 5px;
+        text-align: left;
+        margin: 0 25px;
+    }
+
+
 }
