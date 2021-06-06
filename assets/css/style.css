@@ -78,7 +78,7 @@ header nav ul li a {
 .hero {
     width: 100%;
     height: 225px;
-    background-image: url("/assets/images/desert.jpg");
+    background-image: url("./assets/images/desert.jpg");
     background-size: cover;
     margin-bottom: 30px;
 }
@@ -369,7 +369,7 @@ footer {
 
 @media screen and (max-width: 575px) {
 
-    moved hero subhead even farther left (to avoid overrunning darkened dunes on hero picture)
+    /* moved hero subhead even farther left (to avoid overrunning darkened dunes on hero picture) */
     .hero-subhead h2 {
         padding: 5px 0 0 20px;
     }
